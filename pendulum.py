@@ -21,7 +21,7 @@ g = 9.81 #m/s**2
 # degree
 # Further, it seems that the code gives the best results if the dataset starts 
 # with the pendulum at one of the turning points, i.e. zero angular velocity
-dataset = np.loadtxt("83degree.csv", skiprows=2, delimiter='\t')
+dataset = np.loadtxt("your_file.csv", skiprows=2, delimiter='\t')
 # There is also an option for the students to read in the x coordinate only
 # However, reading in the angle is preferable
 input_is_x_coordinates = False
@@ -103,8 +103,8 @@ phi_numerical, omega_numerical = numerical_pendulum(t, phi0, omega0)
 # Here I thought that the students should put their own labels for the axis
 # into the code
 plt.plot(t_exp, phi_exp, "o",  label='experiment label')
-plt.plot(t, phi_numerical, label='numerical label')
-plt.plot(t, phi_mathematical, label='mathematical label')
+plt.plot(t, phi_numerical, label='numerical solution label')
+plt.plot(t, phi_mathematical, label='mathematical solution label')
 # The location of the legend can also be manually be chosen according to this 
 # chart: https://www.geeksforgeeks.org/change-the-legend-position-in-matplotlib/
 plt.legend(loc='best')
@@ -119,8 +119,8 @@ plt.close()
 # Here I thought that the students should put their own labels for the axis
 # into the code
 plt.plot(t_exp, omega_exp, "o",  label='experiment label')
-plt.plot(t, omega_numerical, label='numerical label')
-plt.plot(t, omega_mathematical, label='mathematical label')
+plt.plot(t, omega_numerical, label='numerical solution label')
+plt.plot(t, omega_mathematical, label='mathematical solution label')
 plt.legend(loc='best')
 plt.ylabel('y-label')
 plt.xlabel('x-label')
